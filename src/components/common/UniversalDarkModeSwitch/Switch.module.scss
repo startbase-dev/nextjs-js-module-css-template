@@ -1,0 +1,47 @@
+.switchCheckbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switchLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  background: var(--black);
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.switchLabel .switchButton {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  transition: 0.2s;
+  background: var(--white);
+  box-shadow: var(--elevation-7);
+}
+
+.switchCheckbox:checked + .switchLabel .switchButton {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.switchLabel:active .switchButton {
+  width: 60px;
+}
+
+.switchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+}

@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import 'normalize.css';
+
+:root {
+  --font: ui-monospace, menlo, monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --border-radius: 12px;
+  --container-size: 90%;
+
+  // TRANSPARENT
+  --transparent: transparent;
+
+  // BLACK
+  --black: #000;
+  --black-rgb: 0 0 0;
+
+  // WHITE
+  --white: #e5eaef;
+  --white-rgb: 229 234 239;
+
+  // MAIN COLORS
+  --vivid-pink: #fb37ff;
+  --vivid-pink-rgb: 251 55 255;
+  --vivid-blue: #41d5ff;
+  --vivid-blue-rgb: 65 213 255;
+
+  // GRAY
+  --gray-600: #717a80;
+  --gray-600-rgb: 113 122 128;
+  --gray-300: #b6bec4;
+  --gray-300-rgb: 182 190 196;
+  --gray-100: #e5eaef;
+  --gray-100-rgb: 229 234 239;
+  --gray-50: #f8f9f9;
+  --gray-50-rgb: 248 249 249;
+  --gray-25: #fafafa;
+  --gray-25-rgb: 250 250 250;
+
+  // TYPOGRAPHY
+  --h1-fs: 40px;
+  --h1-lh: 48px;
+  --h2-fs: 32px;
+  --h2-lh: 40px;
+  --h3-fs: 24px;
+  --h3-lh: 32px;
+  --p: 16px;
+  --p-lh: 24px;
+  --link-fs: 16px;
+  --link-lh: 24px;
+
+  // ELEVATIONS
+  --elevation-1: rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  --elevation-2: rgb(0 0 0 / 10%) 0px 1px 3px 0px,
+    rgb(0 0 0 / 6%) 0px 1px 2px 0px;
+  --elevation-3: rgb(0 0 0 / 10%) 0px 4px 6px -1px,
+    rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+  --elevation-4: rgb(0 0 0 / 10%) 0px 10px 15px -3px,
+    rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+  --elevation-5: rgb(0 0 0 / 10%) 0px 20px 25px -5px,
+    rgb(0 0 0 / 4%) 0px 10px 10px -5px;
+  --elevation-6: rgb(0 0 0 / 25%) 0px 25px 50px -12px;
+  --elevation-7: 0 6px 12px color-mix(in srgb, var(--black) 10%, var(--black));
+  --light-background-text-color: var(--white);
+  --dark-background-text-color: var(--white);
+  --background: var(--black);
+
+  // Form Theme
+  --rfe-white: var(--black);
+  --rfe-white-rgb: var(--black-rgb);
+  --rfe-black: var(--black);
+  --rfe-black-rgb: var(--black-rgb);
+  --rfe-color: var(--white);
+  --rfe-color-placeholder: #646464;
+  --rfe-color-error: var(--vivid-blue);
+  --rfe-border: #e6e6e6;
+  --rfe-background: var(--black) !important;
+  --rfe-background-selected: rgb(var(--vivid-pink-rgb)) !important;
+  --rfe-background-disabled: #1e1e1e;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  :root {
+    --container-size: 516px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  :root {
+    --container-size: 660px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  :root {
+    --container-size: 660px;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  :root {
+    --container-size: 992px;
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  :root {
+    --container-size: 1330px;
+  }
+}
+
+// XXX-Large devices (larger desktops, 2160px and up)
+@media (min-width: 2160px) {
+  :root {
+    --container-size: 2000px;
+  }
+}
+
+#light {
+  // BLACK
+  --black: #e5eaef;
+  --black-rgb: 229 234 239;
+
+  // WHITE
+  --white: #000;
+  --white-rgb: 0 0 0;
+
+  // MAIN COLORS
+  --vivid-pink: #41d5ff;
+  --vivid-pink-rgb: 65 213 255;
+  --vivid-blue: #fb37ff;
+  --vivid-blue-rgb: 251 55 255;
+  --light-background-text-color: var(--black);
+  --dark-background-text-color: var(--white);
+  --background: #fff;
+
+  // Form Theme
+  --rfe-white: var(--black);
+  --rfe-white-rgb: var(--black-rgb);
+  --rfe-black: var(--white);
+  --rfe-black-rgb: var(--white-rgb);
+  --rfe-color: var(--white);
+  --rfe-color-placeholder: #646464;
+  --rfe-color-error: var(--vivid-pink);
+  --rfe-border: #e6e6e6;
+  --rfe-background: var(--black) !important;
+  --rfe-background-selected: rgb(var(--vivid-blue-rgb)) !important;
+  --rfe-background-disabled: #e1e1e1;
+
+  background-image: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(
+      ellipse at 0% 90%,
+      #3c2d83 0%,
+      transparent 55%
+    ),
+    radial-gradient(ellipse at 90% 90%, #c33c65 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 10%, #4a74dc 0%, transparent 55%),
+    radial-gradient(ellipse at 0% 0%, #35244f 0%, transparent 55%);
+}
+
+a {
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}

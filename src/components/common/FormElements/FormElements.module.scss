@@ -1,0 +1,65 @@
+.input {
+  font-family: var(--font) !important;
+  color: var(--white) !important;
+  box-shadow:
+    rgb(var(--vivid-pink-rgb) / 50%) 0 1px 0 0,
+    rgb(var(--vivid-blue-rgb) / 50%) 0 1px 0 inset !important;
+  border: none !important;
+
+  &:focus {
+    box-shadow:
+      rgb(var(--vivid-blue-rgb) / 50%) 0 1px 0 0,
+      rgb(var(--vivid-pink-rgb) / 50%) 6px 1px 0 inset !important;
+  }
+}
+
+.inputFocused {
+  font-family: var(--font) !important;
+  color: var(--white) !important;
+  border: none !important;
+  box-shadow:
+    rgb(var(--vivid-blue-rgb) / 50%) 0 1px 0 0,
+    rgb(var(--vivid-pink-rgb) / 50%) 6px 1px 0 inset !important;
+}
+
+.label {
+  font-style: normal;
+}
+
+.errorLabel {
+  font-style: normal;
+}
+
+.switchInput {
+  font-family: var(--font) !important;
+  color: var(--white) !important;
+  box-shadow:
+    rgb(var(--vivid-pink-rgb) / 50%) 0 1px 0 0,
+    rgb(var(--vivid-blue-rgb) / 50%) 0 1px 0 inset !important;
+  border: none !important;
+
+  &:focus {
+    box-shadow:
+      rgb(var(--vivid-blue-rgb) / 50%) 0 1px 0 0,
+      rgb(var(--vivid-pink-rgb) / 50%) 6px 1px 0 inset !important;
+  }
+
+  & span {
+    top: 3px !important;
+    box-shadow:
+      rgb(var(--vivid-pink-rgb) / 50%) 0 1px 0 0,
+      rgb(var(--vivid-blue-rgb) / 50%) 0 1px 0 inset !important;
+    border: none !important;
+  }
+}
+
+.menu {
+  background-color: var(--rfe-background) !important;
+  border-radius: var(--rfe-border-radius);
+  padding: 4px 6px !important;
+  margin: 6px 0 0 !important;
+  box-shadow:
+    rgb(var(--vivid-pink-rgb) / 50%) 0 1px 0 0,
+    rgb(var(--vivid-blue-rgb) / 50%) 0 1px 0 inset !important;
+  border: none !important;
+}

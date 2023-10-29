@@ -1,0 +1,135 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.headerScrolled {
+  background: rgb(var(--black-rgb) / 50%);
+  backdrop-filter: blur(100px);
+  position: fixed;
+  box-shadow: var(--elevation-3);
+}
+
+.headerOpen {
+  background: rgb(var(--black-rgb) / 50%);
+  backdrop-filter: blur(100px);
+  height: 16rem;
+}
+
+.logo {
+  width: 172px;
+  height: 32px;
+  margin-left: 2rem;
+  color: var(--white);
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  margin: 0 2rem;
+  height: 20px;
+  padding-top: 0.9rem;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  position: absolute;
+  transition: left 0.4s ease;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem;
+
+  a {
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: bolder;
+    padding: 6px 12px;
+    color: var(--white);
+
+    &:hover {
+      color: var(--black);
+      background-color: var(--white);
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .headerOpen {
+    box-shadow: var(--elevation-3);
+  }
+
+  .navLinks {
+    color: var(--black);
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid rgb(var(--white-rgb) / 10%);
+    opacity: 0.9;
+
+    a {
+      margin: 0 1rem;
+    }
+  }
+
+  .joinLinks {
+    top: 172px;
+    border-top: 1px solid rgb(var(--white-rgb) / 10%);
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .menuButton.active .hamburger::before,
+  .menuButton.active .hamburger::after {
+    left: -8px;
+    background-color: var(--white);
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .navLinks {
+    width: 100%;
+  }
+}
